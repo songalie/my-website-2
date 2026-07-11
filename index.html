@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Nova Horizon</title>
+<script>
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('./sw.js');
+  });
+}
+</script>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+body{background:#222;color:#fff}
+header{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;background:#49515a;padding:30px}
+.left{max-width:420px}
+h1{font-size:48px;margin-bottom:15px}
+.left p{font-size:24px;margin:8px 0}
+.contact{margin-top:20px;line-height:1.8}
+.hero img{width:520px;max-width:100%;border-radius:10px}
+nav{display:flex;justify-content:center;flex-wrap:wrap;background:#111}
+nav a{color:#fff;text-decoration:none;padding:18px 24px}
+nav a:hover{background:#0b7dda}
+section{max-width:1100px;margin:auto;padding:50px 20px}
+h2{font-size:36px;margin-bottom:20px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+.card{background:#333;padding:20px;border-radius:10px}
+.card img{width:100%;border-radius:8px;margin-bottom:15px}
+button{padding:12px 22px;border:none;border-radius:6px;background:#0b7dda;color:#fff;cursor:pointer}
+footer{background:#49515a;text-align:center;padding:30px}
+input,textarea{width:100%;padding:12px;margin:10px 0;border-radius:6px;border:none}
+</style>
+</head>
+<body>
+<header>
+<div class="left">
+<h1>Nova Horizon</h1>
+<p>Consultations privées</p>
+<p>Guidance personnalisée</p>
+<p>Accompagnement professionnel</p>
+<div class="contact">
+📞 +41 79 624 85 17<br>
+✉ contact@novahorizon.ch
+</div>
+</div>
+<div class="hero">
+<img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?w=1200" alt="">
+</div>
+</header>
+
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#services">Services</a>
+<a href="#apropos">À propos</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<section id="accueil">
+<h2>Bienvenue</h2>
+<p>Bienvenue sur Nova Horizon. Ce site présente nos services et notre accompagnement dans un cadre professionnel.</p>
+</section>
+
+<section id="services">
+<h2>Nos Services</h2>
+<div class="grid">
+<div class="card"><img src="https://picsum.photos/400/250?1"><h3>Consultation</h3><p>Durée : 60 min<br>Tarif : 95 CHF</p></div>
+<div class="card"><img src="https://picsum.photos/400/250?2"><h3>Accompagnement</h3><p>Suivi personnalisé selon vos besoins.</p></div>
+<div class="card"><img src="https://picsum.photos/400/250?3"><h3>Conseils</h3><p>Échange et recommandations adaptées.</p></div>
+</div>
+</section>
+
+<section id="apropos">
+<h2>À propos</h2>
+<p>Nova Horizon est un site fictif créé à des fins de démonstration.</p>
+<button onclick="alert('Merci pour votre visite !')">En savoir plus</button>
+</section>
+
+<section id="contact">
+<h2>Contact</h2>
+<input placeholder="Votre nom">
+<input placeholder="Votre email">
+<textarea rows="5" placeholder="Votre message"></textarea>
+<button onclick="envoyer()">Envoyer</button>
+</section>
+
+<footer>© 2026 Nova Horizon — Tous droits réservés</footer>
+
+<script>
+function envoyer(){
+alert("Votre message a été envoyé (démo).");
+}
+</script>
+</body>
+</html>
